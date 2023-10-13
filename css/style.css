@@ -1,0 +1,43 @@
+#login-from h1 {
+    padding: 100px;
+    text-align: center;
+}
+.login-area{
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px gray;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.login-area h4{
+    margin-bottom: 15px;
+}
+#banking-area {
+    display: none;
+    padding: 100px;
+}
+.blance-status  {
+    margin: 0 10px;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.diposite{
+    background-color: slateblue;
+}
+.withdraw{
+    background-color: lightsalmon;
+}
+.blance{
+    background-color: orange;
+}
+.blance-display {
+    margin-top: 100px;
+}
+

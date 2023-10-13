@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornimm Bank</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="main" class="container">
+
+        <section id="login-from">
+            <h1> Welcome To Ornimm Bank</h1>
+            <div class="login-area">
+                <h4> LOGIN</h4>
+                <input type="text" placeholder="Enter Your Email" class="form-control">
+                <br>
+                <input type="password" placeholder="Enter Your password" class="form-control">
+                <br>
+                <button id="login-button" class="btn btn-success">Enter</button>
+            </div>
+        </section>
+        <section id="banking-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="blance-status diposite">
+                        <h5>Deposit</h5>
+                    <h2>$ <span id="deposit-current-amount">00</span></h2>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blance-status withdraw">
+                        <h5>Withdraw</h5>
+                    <h2>$ 00</h2>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blance-status blance">
+                        <h5>Blance</h5>
+                    <h2>$ <span id="total-curnt-blance">1240</span> </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row blance-display">
+                <div class="col-md-6">
+                    <div class="login-area">
+                        <h4> Deposit </h4>
+                        <input id="deposit-input" type="text" class="form-control" placeholder=" $ ammount you want to DEPOSIT">
+                        <br>
+                        <button id="deposit-button" class="btn btn-success"> Deposit</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="login-area">
+                        <h4> Withdraw</h4>
+                        <input type="text" class="form-control" placeholder=" $ ammount you want to WITHDRAW">
+                        <br>
+                        <button class=" btn btn-success"> Withdraw </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+   
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
