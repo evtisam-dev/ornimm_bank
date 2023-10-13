@@ -9,11 +9,10 @@ logInButton.addEventListener('click' , function(){
 const depositButton = document.getElementById("deposit-button");
 depositButton.addEventListener('click', function (){
     const depositIput = document.getElementById("deposit-input").value;
-    const depositAmount = parseFloat(depositIput);
 
-    depositAction ('deposit-current-amount', depositAmount );
-
-    depositAction ('total-curnt-blance', depositAmount );
+    const depositNumberr = withdrawNumber ('deposit-input');
+    depositAction ('deposit-current-amount', depositNumberr );
+    depositAction ('total-curnt-blance', depositNumberr );
 
     document.getElementById("deposit-input").value = "";
 })
@@ -27,21 +26,18 @@ function depositAction (id, depositAmount){
 // withdraw input
 var withdrawbtn = document.getElementById('withdraw-button');
 withdrawbtn.addEventListener('click', function(){
-    var withdrawInput = document.getElementById('withdraw-input').value;
-    var withdrawInputAmount = parseFloat(withdrawInput);
-// withdraw add
-    var preWithdraw = document.getElementById('pre-withdraw').innerText;
-    var preWithdrawAmount = parseFloat(preWithdraw);
-    var currentWithdrawAmount = withdrawInputAmount + preWithdrawAmount;
-    document.getElementById('pre-withdraw').innerText = currentWithdrawAmount;
+    var withdrawNumberr = withdrawNumber ('withdraw-input');
 
+    depositAction ('pre-withdraw', withdrawNumberr )
     document.getElementById('withdraw-input').value = "";
+    depositAction ('total-curnt-blance', -1 * withdrawNumberr );
 
-// remove withdraw amount from total blance
-    var totalBlnc = document.getElementById('total-curnt-blance').innerText;
-    var total = parseFloat(totalBlnc)
-    var mainBlance = total - withdrawInputAmount;
-    document.getElementById('total-curnt-blance').innerText = mainBlance;
 })
+
+function withdrawNumber(id){
+    var withdrawInput = document.getElementById(id).value;
+    var withdrawInputAmount = parseFloat(withdrawInput);
+    return withdrawInputAmount;
+}
 
 
